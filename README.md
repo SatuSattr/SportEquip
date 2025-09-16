@@ -1,61 +1,204 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Sistem Inventaris Alat Olahraga
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Laravel](https://img.shields.io/badge/laravel-12.x-red.svg)
+![PHP](https://img.shields.io/badge/php-8.2+-blue.svg)
 
-## About Laravel
+Sistem Inventaris Alat Olahraga adalah aplikasi berbasis web yang dikembangkan untuk membantu manajemen inventaris alat olahraga di sekolah secara efisien. Sistem ini memungkinkan administrator untuk mengelola inventaris dan memungkinkan pengguna untuk meminjam peralatan.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📖 Tentang Proyek
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Proyek ini bertujuan untuk membangun sistem manajemen inventaris alat olahraga menggunakan framework Laravel. Sistem ini mendukung login admin, manajemen peralatan, permintaan peminjaman, dan alur kerja persetujuan, semua disajikan dalam desain yang responsif dan menarik secara visual.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🌟 Fitur
 
-## Learning Laravel
+### Fitur Admin
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-   **Autentikasi**: Login menggunakan username dan password
+-   **Dashboard**: Tampilan tabel peralatan olahraga dengan detail (ID, nama, status, gambar, jumlah)
+-   **Manajemen Peralatan**:
+    -   Tambah peralatan baru
+    -   Edit detail peralatan
+    -   Hapus peralatan
+-   **Manajemen Peminjaman**:
+    -   Tampilan tabel permintaan peminjaman dengan detail (nama peminjam, item, jumlah, tanggal pinjam, tanggal kembali)
+    -   Persetujuan atau penolakan permintaan
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Fitur Pengguna
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+-   **Penjelajahan Peralatan**: Tampilan peralatan olahraga yang tersedia dalam format kartu dengan detail (gambar, status, jumlah)
+-   **Formulir Peminjaman**:
+    -   Input: nama peminjam, nama item, jumlah, tanggal pinjam, tanggal kembali
+    -   Pengiriman formulir untuk membuat permintaan peminjaman
 
-## Laravel Sponsors
+### Fitur Tambahan
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+-   **Pencarian dan Pagination**: Pencarian peralatan dengan pagination di halaman pengguna
+-   **Pratinjau Gambar**: Pratinjau gambar peralatan saat memilih di formulir peminjaman
+-   **Auto Seleksi**: Otomatis memilih peralatan saat klik "Pinjam" dari halaman daftar peralatan
+-   **Desain Responsif**: Tampilan yang responsif untuk desktop dan mobile
+-   **Notifikasi**: Penggunaan SweetAlert2 untuk notifikasi interaktif
 
-### Premium Partners
+## 🛠️ Teknologi yang Digunakan
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+-   **[Laravel 12](https://laravel.com/)** - Framework PHP untuk pengembangan web
+-   **[Tailwind CSS](https://tailwindcss.com/)** - Framework CSS untuk desain responsif
+-   **[Laravel Breeze](https://laravel.com/docs/10.x/starter-kits#laravel-breeze)** - Starter kit autentikasi
+-   **[SweetAlert2](https://sweetalert2.github.io/)** - Library untuk alert yang menarik
+-   **[Font Awesome](https://fontawesome.com/)** - Library ikon
+-   **PHP 8.2+**
+-   **SQLite/MySQL** - Database
+-   **Composer** - Dependency Manager untuk PHP
+-   **NPM** - Package Manager untuk JavaScript
 
-## Contributing
+## 🚀 Instalasi
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Prasyarat
 
-## Code of Conduct
+-   PHP >= 8.2
+-   Composer
+-   Node.js dan NPM
+-   Database (SQLite/MySQL/PostgreSQL)
+-   Web Server (Apache/Nginx) atau Laravel Valet
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Langkah-langkah Instalasi
 
-## Security Vulnerabilities
+1. **Clone Repository**
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+    ```bash
+    git clone https://github.com/username/inventaris-olahraga.git
+    cd inventaris-olahraga
+    ```
 
-## License
+2. **Install Dependencies PHP**
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    ```bash
+    composer install
+    ```
+
+3. **Install Dependencies JavaScript**
+
+    ```bash
+    npm install
+    ```
+
+4. **Copy dan Konfigurasi Environment**
+
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
+    ```
+
+5. **Konfigurasi Database**
+   Edit file `.env` dan sesuaikan konfigurasi database:
+
+    ```env
+    DB_CONNECTION=sqlite
+    # atau untuk MySQL:
+    # DB_CONNECTION=mysql
+    # DB_HOST=127.0.0.1
+    # DB_PORT=3306
+    # DB_DATABASE=nama_database
+    # DB_USERNAME=username
+    # DB_PASSWORD=password
+    ```
+
+6. **Jalankan Migrations dan Seeds**
+
+    ```bash
+    php artisan migrate
+    php artisan db:seed --class=AdminUserSeeder
+    ```
+
+7. **Compile Assets**
+
+    ```bash
+    npm run dev
+    # atau untuk produksi:
+    # npm run build
+    ```
+
+8. **Jalankan Server**
+
+    ```bash
+    php artisan serve
+    ```
+
+9. **Akses Aplikasi**
+   Buka browser dan akses `http://localhost:8000`
+
+### Kredensial Default
+
+-   **Admin Login**:
+    -   Email: `admin@example.com`
+    -   Password: `password`
+
+## 🎮 Cara Penggunaan
+
+### Untuk Administrator
+
+1. **Login**: Akses halaman login dan masuk menggunakan kredensial admin
+2. **Dashboard**: Lihat semua peralatan olahraga dalam bentuk tabel
+3. **Manajemen Peralatan**:
+    - Klik "Add Equipment" untuk menambah peralatan baru
+    - Gunakan tombol "Edit" untuk mengedit detail peralatan
+    - Gunakan tombol "Delete" untuk menghapus peralatan
+4. **Manajemen Peminjaman**:
+    - Akses menu "Borrow Requests" untuk melihat semua permintaan
+    - Gunakan tombol "Approve" atau "Decline" untuk memproses permintaan
+
+### Untuk Pengguna Umum
+
+1. **Halaman Utama**: Akses halaman utama untuk melihat peralatan yang tersedia
+2. **Pencarian**: Gunakan fitur pencarian untuk mencari peralatan tertentu
+3. **Pagination**: Gunakan navigasi halaman untuk melihat lebih banyak peralatan
+4. **Pinjam Peralatan**:
+    - Klik tombol "Request to Borrow" pada kartu peralatan
+    - Isi formulir peminjaman dengan data yang diperlukan
+    - Lihat pratinjau gambar peralatan sebelum mengirim
+    - Kirim permintaan peminjaman
+
+## 🗄️ Struktur Database
+
+Database: `db_alatolahraga`
+
+### Tabel: `users`
+
+| Kolom    | Tipe Data | Deskripsi         |
+| -------- | --------- | ----------------- |
+| id       | bigint    | ID unik pengguna  |
+| name     | varchar   | Nama pengguna     |
+| email    | varchar   | Email pengguna    |
+| password | varchar   | Password pengguna |
+
+### Tabel: `sports_equipment`
+
+| Kolom         | Tipe Data | Deskripsi                                |
+| ------------- | --------- | ---------------------------------------- |
+| id            | bigint    | ID unik peralatan                        |
+| item_name     | varchar   | Nama peralatan                           |
+| item_status   | varchar   | Status peralatan (available/unavailable) |
+| item_image    | varchar   | Path gambar peralatan (opsional)         |
+| item_quantity | int       | Jumlah peralatan tersedia                |
+
+### Tabel: `borrow_requests`
+
+| Kolom         | Tipe Data | Deskripsi                                     |
+| ------------- | --------- | --------------------------------------------- |
+| id            | bigint    | ID unik permintaan                            |
+| borrower_name | varchar   | Nama peminjam                                 |
+| item_name     | varchar   | Nama peralatan yang dipinjam                  |
+| quantity      | int       | Jumlah yang dipinjam                          |
+| borrow_date   | date      | Tanggal peminjaman                            |
+| return_date   | date      | Tanggal pengembalian                          |
+| status        | varchar   | Status permintaan (pending/approved/declined) |
+
+## 🤝 Kontribusi
+
+Kontribusi sangat diharapkan! Untuk berkontribusi:
+
+1. Fork proyek ini
+2. Buat branch fitur (`git checkout -b feature/AmazingFeature`)
+3. Commit perubahan (`git commit -m 'Add some AmazingFeature'`)
+4. Push ke branch (`git push origin feature/AmazingFeature`)
+5. Buka Pull Request

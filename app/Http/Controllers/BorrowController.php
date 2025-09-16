@@ -16,10 +16,11 @@ class BorrowController extends Controller
     }
 
     // User: Show borrow form
-    public function create()
+    public function create(Request $request)
     {
         $equipment = SportsEquipment::where('item_status', 'available')->get();
-        return view('user.borrow', compact('equipment'));
+        $selectedItem = $request->query('item');
+        return view('user.borrow', compact('equipment', 'selectedItem'));
     }
 
     // User: Store borrow request

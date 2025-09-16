@@ -7,7 +7,6 @@ use App\Http\Controllers\BorrowController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [EquipmentController::class, 'list'])->name('equipment.list');
-
 Route::get('/dashboard', [AdminController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 // Admin routes

@@ -95,9 +95,19 @@ class EquipmentController extends Controller
     }
 
     // User: Display equipment in card format
-    public function list()
+    public function list(Request $request)
     {
-        $equipment = SportsEquipment::where('item_status', 'available')->get();
+        $query = SportsEquipment::where('item_status', 'available');
+        
+        // Handle search
+        if ($request->has('search') && $request->search != '') {
+            $search = $request->search;
+            $query->where('item_name', 'LIKE', "%{$search}%");
+        }
+        
+        // Paginate results
+        $equipment = $query->paginate(6);
+        
         return view('user.equipment', compact('equipment'));
     }
 }
