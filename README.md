@@ -192,13 +192,3 @@ Database: `db_alatolahraga`
 | borrow_date   | date      | Tanggal peminjaman                            |
 | return_date   | date      | Tanggal pengembalian                          |
 | status        | varchar   | Status permintaan (pending/approved/declined) |
-
-## 🤝 Kontribusi
-
-Kontribusi sangat diharapkan! Untuk berkontribusi:
-
-1. Fork proyek ini
-2. Buat branch fitur (`git checkout -b feature/AmazingFeature`)
-3. Commit perubahan (`git commit -m 'Add some AmazingFeature'`)
-4. Push ke branch (`git push origin feature/AmazingFeature`)
-5. Buka Pull Request
