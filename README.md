@@ -1,4 +1,4 @@
-# Sistem Inventaris Alat Olahraga
+# [SportEquip] Sistem Inventaris Alat Olahraga
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Laravel](https://img.shields.io/badge/laravel-12.x-red.svg)
